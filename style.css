@@ -1,3 +1,9 @@
+@font-face {
+	font-family: 'Brittany Signature';
+	src: url('fonts/BrittanySignature.ttf') format('opentype');
+	font-weight: 400;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +14,7 @@
     font-size: 62.5%;
 
     /* FONTS */
-    --heading-font: 'Cookie', cursive;
+    --heading-font: 'Brittany Signature', cursive;
     --text-font: 'Montserrat', sans-serif;
     --highlight-font: 'Cinzel', serif;
 
@@ -91,11 +97,12 @@ nav ul li a:hover {
     height: 90vh;
 }
 
-/*
-
 .home .date {
     text-align: center;
     padding: 7rem 0;
+    color: #FFF;
+    letter-spacing: .7rem;
+    user-select: none;
 }
 
 .home .title h1 {
@@ -103,9 +110,13 @@ nav ul li a:hover {
     font-family: var(--heading-font);
     font-size: 20rem;
     user-select: none;
+    color: #FFF;
+    opacity: .4;
 }
 
-*/
+.home .title span {
+    font-size: 12rem;
+}
 
 @media (max-width: 999px) {
     body {

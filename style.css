@@ -78,6 +78,7 @@ nav ul li a:hover {
     height: .2rem;
     background: #FFF;
     margin: .8rem;
+    transition: .3s;
 }
 
 .mobile-menu:hover {

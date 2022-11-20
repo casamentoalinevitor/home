@@ -209,6 +209,7 @@ nav ul li a:hover {
 .como-chegar .address-info .address {
     text-align: center;
     width: 50%;
+    padding: 0 1rem;
 }
 
 .como-chegar .address-info .address h3 {
@@ -297,6 +298,19 @@ footer {
 
     .guest-confirmation button {
         font-size: 1.4rem;
+    }
+
+    .como-chegar .address-info {
+        flex-direction: column-reverse;
+    }
+
+    .como-chegar .address-info iframe {
+        width: 100%;
+    }
+
+    .como-chegar .address-info .address {
+        width: 100%;
+        margin: 5rem 0;
     }
 }
 

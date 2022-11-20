@@ -35,6 +35,12 @@ body {
     margin: 0 auto;
 }
 
+.subtitle {
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-size: 2.4rem;
+}
+
 header {
     background: var(--main-color);
     display: flex;
@@ -178,6 +184,56 @@ nav ul li a:hover {
 
 .guest-confirmation button:hover {
     color: #FFF;
+}
+
+/* COMO CHEGAR SECTION */
+
+.como-chegar {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.como-chegar .address-info {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.como-chegar .address-info iframe {
+    width: 50%;
+    height: 50rem;
+    border: .3rem solid var(--main-color);
+}
+
+.como-chegar .address-info .address {
+    text-align: center;
+    width: 50%;
+}
+
+.como-chegar .address-info .address h3 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.como-chegar .address-info .address .local {
+    font-family: var(--highlight-font);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.como-chegar .address-info .address .instructions {
+    margin-top: 5rem;
+}
+
+footer {
+    height: 5rem;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    margin-top: 10rem;
 }
 
 @media (max-width: 1020px) {

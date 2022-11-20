@@ -186,6 +186,25 @@ nav ul li a:hover {
     color: #FFF;
 }
 
+/* OUR HISTORY SECTION */
+
+.our-history {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    margin-bottom: 10rem;
+}
+
+.our-history .col-2 {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.our-history .col-2 p {
+    width: 100%;
+}
+
 /* COMO CHEGAR SECTION */
 
 .como-chegar {

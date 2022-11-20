@@ -1,3 +1,5 @@
+// RESPONSIVE MENU
+
 class MobileNavbar {
     constructor(mobileMenu, navList) {
         this.mobileMenu = document.querySelector(mobileMenu)
@@ -31,3 +33,12 @@ const mobileNavbar = new MobileNavbar(
 )
 
 mobileNavbar.init()
+
+// COUNTDOWN
+
+new Countdown({
+    selector: '#timer',
+    msgAfter: "O Evento Iniciou!",
+    msgPattern: "{days}",
+    dateEnd: new Date("2023-04-29T12:00:00"),
+});

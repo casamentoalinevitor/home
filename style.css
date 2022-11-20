@@ -319,6 +319,10 @@ footer {
         font-size: 1.4rem;
     }
 
+    .our-history .col-2 {
+        flex-direction: column;
+    }
+
     .como-chegar .address-info {
         flex-direction: column-reverse;
     }

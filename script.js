@@ -42,3 +42,21 @@ new Countdown({
     msgPattern: "{days}",
     dateEnd: new Date("2023-04-29T12:00:00"),
 });
+
+let modal = document.getElementById("myModal");
+let btn = document.getElementById("myBtn");
+let span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "flex";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

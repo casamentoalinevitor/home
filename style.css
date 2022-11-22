@@ -30,15 +30,18 @@ body {
     font-family: var(--text-font);
 }
 
-.page {
-    max-width: 144rem;
-    margin: 0 auto;
-}
 
 .subtitle {
     text-transform: uppercase;
-    color: var(--main-color);
+    color: #FFF;
+    display: flex;
+    align-items: center;
     font-size: 2.4rem;
+    letter-spacing: .5rem;
+    height: 5rem;
+    padding-left: 1rem;
+    transition: .3s;
+    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .5);
 }
 
 header {
@@ -109,12 +112,17 @@ nav ul li a:hover {
     position: relative;
 }
 
+.home-page {
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
 .home .date {
     text-align: center;
-    padding: 4rem 0 0;
     color: #FFF;
     letter-spacing: .7rem;
     user-select: none;
+    padding: 4rem 0 1rem;
 }
 
 .home .title h1 {
@@ -167,6 +175,20 @@ nav ul li a:hover {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    padding: 5rem 2rem;
+}
+
+.guest-confirmation div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guest-confirmation iframe {
+    max-width: 56rem;
+    width: 100%;
+    height: 31.5rem;
 }
 
 .guest-confirmation button {
@@ -195,6 +217,13 @@ nav ul li a:hover {
     margin-bottom: 10rem;
 }
 
+.our-history h2 {
+    background-image: url(img/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .our-history .col-2 {
     display: flex;
     gap: 2rem;
@@ -211,6 +240,13 @@ nav ul li a:hover {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.como-chegar h2 {
+    background-image: url(img/5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .como-chegar .address-info {
@@ -287,6 +323,14 @@ footer {
 
     .home .title span {
         font-size: 7rem;
+    }
+
+    .guest-confirmation {
+        flex-direction: column;
+    }
+
+    .guest-confirmation div {
+        width: 100%;
     }
 }
 

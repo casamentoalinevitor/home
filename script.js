@@ -65,6 +65,7 @@ window.onclick = function(event) {
 
 let backGalleryPhotoButton = document.querySelector('.btn-back')
 let nextGalleryPhotoButton = document.querySelector('.btn-next')
+let counter = 1
 
 for (let i = 1; i < 6; i++) {
   if (document.querySelector('#radio' + i).checked) {
@@ -94,3 +95,41 @@ function nextGalleryPhoto() {
   
   document.querySelector('#radio' + counter).checked = true
 }
+
+// PHOTOS ROW
+
+let imagesPhotosRow = document.querySelectorAll('.img')
+let imagePhotosRow1 = document.querySelector('#img1')
+let imagePhotosRow2 = document.querySelector('#img2')
+let imagePhotosRow3 = document.querySelector('#img3')
+let imagePhotosRow4 = document.querySelector('#img4')
+let imagePhotosRow5 = document.querySelector('#img5')
+
+setInterval(function() {
+  let randomNumber = Math.floor(Math.random() * 15)
+
+  if (randomNumber == 0) {
+    randomNumber = 1
+  }
+
+  console.log(randomNumber)
+
+  let randomPhoto = Math.floor(Math.random() * 5)
+  console.log('Foto:' + randomPhoto)
+
+    imagesPhotosRow[randomPhoto].style.backgroundImage = `url(img/ourhistory/${randomNumber}.jpg)`
+}, 2000)
+
+function gerarNumeroAleatorio(elemento) {
+  let randomNumber1 = Math.round(Math.random() * 15)
+  let randomNumber2 = Math.round(Math.random() * 15)
+  let randomNumber3 = Math.round(Math.random() * 15)
+  let randomNumber4 = Math.round(Math.random() * 15)
+  let randomNumber5 = Math.round(Math.random() * 15)
+
+  if (randomNumber1 != randomNumber2 && randomNumber1 != randomNumber3 && randomNumber1 != randomNumber4 && randomNumber1 != randomNumber5) {
+    imagePhotosRow1.style.backgroundImage = `url(img/ourhistory/${randomNumber1}.jpg)`
+  }
+}
+
+document.querySelector("#audio").volume = .1

@@ -60,3 +60,37 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// PHOTOS SLIDER
+
+let backGalleryPhotoButton = document.querySelector('.btn-back')
+let nextGalleryPhotoButton = document.querySelector('.btn-next')
+
+for (let i = 1; i < 6; i++) {
+  if (document.querySelector('#radio' + i).checked) {
+    counter = i
+  }
+}
+
+backGalleryPhotoButton.addEventListener('click', backGalleryPhoto)
+nextGalleryPhotoButton.addEventListener('click', nextGalleryPhoto)
+
+function backGalleryPhoto() {
+  if (counter == 1) {
+    counter = 5
+  } else {
+    counter--
+  }
+
+  document.querySelector('#radio' + counter).checked = true
+}
+
+function nextGalleryPhoto() {
+  if (counter == 5) {
+    counter = 1
+  } else {
+    counter++
+  }
+  
+  document.querySelector('#radio' + counter).checked = true
+}

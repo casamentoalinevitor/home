@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cookie&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://rawgit.com/HugoGiraudel/Countdown.js/master/countdown.js"></script>
+    <script src="https://kit.fontawesome.com/39a25b7dcd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -120,7 +121,46 @@
         <section class="gallery">
             <a name="galeriadefotos"></a>
             <h2 class="subtitle">Galeria de Fotos</h2>
-            <div class="images"><img src="img/gallery/2.jpg" alt="Image 2"></div>
+            <div class="images-gallery">
+                <div class="btn-back">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1" checked>
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
+
+                        <div class="slide first">
+                            <img src="img/gallery/1.jpg" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                            <img src="img/gallery/2.jpg" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                            <img src="img/gallery/3.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="img/gallery/4.jpg" alt="Image 4">
+                        </div>
+                        <div class="slide">
+                            <img src="img/gallery/5.jpg" alt="Image 5">
+                        </div>
+                    </div>
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                    </div>
+                </div>
+                <div class="btn-next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

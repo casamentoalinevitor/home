@@ -222,6 +222,20 @@ button:hover {
     width: 100%;
 }
 
+.our-history .photos-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .1rem;
+    margin-top: 4rem;
+}
+
+.our-history .photos-row img {
+    width: 20%;
+    height: 25rem;
+    object-fit: cover;
+}
+
 /* COMO CHEGAR SECTION */
 
 .como-chegar {

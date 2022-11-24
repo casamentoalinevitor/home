@@ -65,7 +65,69 @@ window.onclick = function(event) {
 
 let backGalleryPhotoButton = document.querySelector('.btn-back')
 let nextGalleryPhotoButton = document.querySelector('.btn-next')
+
+let radio1 = document.querySelector('#radio1')
+let radio2 = document.querySelector('#radio2')
+let radio3 = document.querySelector('#radio3')
+let radio4 = document.querySelector('#radio4')
+let radio5 = document.querySelector('#radio5')
+
+let label1 = document.querySelector('#label1')
+let label2 = document.querySelector('#label2')
+let label3 = document.querySelector('#label3')
+let label4 = document.querySelector('#label4')
+let label5 = document.querySelector('#label5')
+
+let activeClass = 'active'
 let counter = 1
+
+label1.classList.add(activeClass)
+
+radio1.addEventListener('click', function() {
+  label1.classList.add(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.remove(activeClass)
+  counter = 1
+})
+
+radio2.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.add(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.remove(activeClass)
+  counter = 2
+})
+
+radio3.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.add(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.remove(activeClass)
+  counter = 3
+})
+
+radio4.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.add(activeClass)
+  label5.classList.remove(activeClass)
+  counter = 4
+})
+
+radio5.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.add(activeClass)
+  counter = 5
+})
+
 
 for (let i = 1; i < 6; i++) {
   if (document.querySelector('#radio' + i).checked) {
@@ -84,6 +146,18 @@ function backGalleryPhoto() {
   }
 
   document.querySelector('#radio' + counter).checked = true
+
+  if (document.querySelector('#radio' + counter).checked) {
+
+    let labelChecked = document.querySelector('#label' + counter)
+
+    label1.classList.remove(activeClass)
+    label2.classList.remove(activeClass)
+    label3.classList.remove(activeClass)
+    label4.classList.remove(activeClass)
+    label5.classList.remove(activeClass)
+    labelChecked.classList.add(activeClass)
+  }
 }
 
 function nextGalleryPhoto() {
@@ -94,6 +168,18 @@ function nextGalleryPhoto() {
   }
   
   document.querySelector('#radio' + counter).checked = true
+
+  if (document.querySelector('#radio' + counter).checked) {
+
+    let labelChecked = document.querySelector('#label' + counter)
+
+    label1.classList.remove(activeClass)
+    label2.classList.remove(activeClass)
+    label3.classList.remove(activeClass)
+    label4.classList.remove(activeClass)
+    label5.classList.remove(activeClass)
+    labelChecked.classList.add(activeClass)
+  }
 }
 
 // PHOTOS ROW
@@ -111,4 +197,4 @@ setInterval(function() {
     imagesPhotosRow[randomPhoto].style.backgroundImage = `url(img/ourhistory/${randomNumber}.jpg)`
 }, 500)
 
-document.querySelector("#audio").volume = .1
+// document.querySelector("#audio").volume = .1

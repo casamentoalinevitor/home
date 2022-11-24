@@ -508,7 +508,11 @@ button:hover {
     margin-left: -80%;
 }
 
-#label1:visited {
+#label1.active,
+#label2.active,
+#label3.active,
+#label4.active,
+#label5.active {
     background: var(--highlight-color);
 }
 

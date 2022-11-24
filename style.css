@@ -239,9 +239,9 @@ button:hover {
 .photos-row .img {
     width: 20%;
     height: 25rem;
-    /* background-image: url(img/gallery/1.jpg); */
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 1000px) {
@@ -508,6 +508,10 @@ button:hover {
     margin-left: -80%;
 }
 
+#label1:visited {
+    background: var(--highlight-color);
+}
+
 footer {
     height: 5rem;
     background: var(--main-color);
@@ -516,6 +520,7 @@ footer {
     justify-content: center;
     color: #FFF;
     margin-top: 10rem;
+    font-family: var(--highlight-font);
 }
 
 audio {
@@ -626,6 +631,10 @@ audio {
     .como-chegar .address-info .address {
         width: 100%;
         margin: 5rem 0;
+    }
+
+    .slide img {
+        object-fit: cover;
     }
 }
 

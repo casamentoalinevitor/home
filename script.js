@@ -118,18 +118,6 @@ setInterval(function() {
   console.log('Foto:' + randomPhoto)
 
     imagesPhotosRow[randomPhoto].style.backgroundImage = `url(img/ourhistory/${randomNumber}.jpg)`
-}, 2000)
-
-function gerarNumeroAleatorio(elemento) {
-  let randomNumber1 = Math.round(Math.random() * 15)
-  let randomNumber2 = Math.round(Math.random() * 15)
-  let randomNumber3 = Math.round(Math.random() * 15)
-  let randomNumber4 = Math.round(Math.random() * 15)
-  let randomNumber5 = Math.round(Math.random() * 15)
-
-  if (randomNumber1 != randomNumber2 && randomNumber1 != randomNumber3 && randomNumber1 != randomNumber4 && randomNumber1 != randomNumber5) {
-    imagePhotosRow1.style.backgroundImage = `url(img/ourhistory/${randomNumber1}.jpg)`
-  }
-}
+}, 500)
 
 document.querySelector("#audio").volume = .1

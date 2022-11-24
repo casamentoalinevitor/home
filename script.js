@@ -99,11 +99,6 @@ function nextGalleryPhoto() {
 // PHOTOS ROW
 
 let imagesPhotosRow = document.querySelectorAll('.img')
-let imagePhotosRow1 = document.querySelector('#img1')
-let imagePhotosRow2 = document.querySelector('#img2')
-let imagePhotosRow3 = document.querySelector('#img3')
-let imagePhotosRow4 = document.querySelector('#img4')
-let imagePhotosRow5 = document.querySelector('#img5')
 
 setInterval(function() {
   let randomNumber = Math.floor(Math.random() * 15)
@@ -112,11 +107,7 @@ setInterval(function() {
     randomNumber = 1
   }
 
-  console.log(randomNumber)
-
   let randomPhoto = Math.floor(Math.random() * 5)
-  console.log('Foto:' + randomPhoto)
-
     imagesPhotosRow[randomPhoto].style.backgroundImage = `url(img/ourhistory/${randomNumber}.jpg)`
 }, 500)
 

@@ -128,7 +128,6 @@ radio5.addEventListener('click', function() {
   counter = 5
 })
 
-
 for (let i = 1; i < 6; i++) {
   if (document.querySelector('#radio' + i).checked) {
     counter = i

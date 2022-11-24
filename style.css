@@ -25,11 +25,18 @@
     --green: #353920;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: 5rem;
+  }
+
 body {
     font-size: 1.6rem;
     font-family: var(--text-font);
 }
-
 
 .subtitle {
     text-transform: uppercase;
@@ -389,6 +396,10 @@ button:hover {
 
 .links button:hover > a {
     color: var(--highlight-color);
+}
+
+#myBtn {
+    margin: 5rem auto 0;
 }
 
 /* PHOTOS GALLERY SECTION */

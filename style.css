@@ -204,10 +204,21 @@ nav ul li a:hover {
 
 .modal-content {
     background: var(--highlight-color);
-    padding: 8rem 4rem 4rem;
+    padding: 6rem 4rem 4rem;
     position: relative;
     max-width: 60rem;
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content h2 {
+    max-width: 50rem;
+    margin-bottom: 4rem;
+    color: var(--main-color);
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .modal-content form {
@@ -253,12 +264,12 @@ nav ul li a:hover {
 
 .modal .close {
     color: var(--main-color);
-    font-size: 5rem;
+    font-size: 6rem;
     transition: .3s;
     font-weight: 500;
     position: absolute;
     top: 0;
-    right: 1rem;
+    right: 2rem;
 }
 
 .close:hover,
@@ -419,7 +430,6 @@ button:hover {
 .gifts-list {
     max-width: 144rem;
     padding: 0 4rem;
-    margin: 5rem auto;
 }
 
 .gifts-list a {

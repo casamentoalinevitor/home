@@ -184,17 +184,17 @@ function nextGalleryPhoto() {
 
 // PHOTOS ROW
 
-let imagesPhotosRow = document.querySelectorAll('.img')
+// let imagesPhotosRow = document.querySelectorAll('.img')
 
-setInterval(function() {
-  let randomNumber = Math.floor(Math.random() * 15)
+// setInterval(function() {
+//   let randomNumber = Math.floor(Math.random() * 15)
 
-  if (randomNumber == 0) {
-    randomNumber = 1
-  }
+//   if (randomNumber == 0) {
+//     randomNumber = 1
+//   }
 
-  let randomPhoto = Math.floor(Math.random() * 5)
-    imagesPhotosRow[randomPhoto].style.backgroundImage = `url(img/ourhistory/${randomNumber}.jpg)`
-}, 500)
+//   let randomPhoto = Math.floor(Math.random() * 5)
+//     imagesPhotosRow[randomPhoto].style.backgroundImage = `url(img/ourhistory/${randomNumber}.jpg)`
+// }, 500)
 
 // document.querySelector("#audio").volume = .1

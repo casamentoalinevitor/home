@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cookie&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <script src="https://rawgit.com/HugoGiraudel/Countdown.js/master/countdown.js"></script>
     <script src="https://kit.fontawesome.com/39a25b7dcd.js" crossorigin="anonymous"></script>
@@ -19,7 +20,7 @@
         <nav>
             <a class="logo" href="#">
                 <img
-                    src="img/white-logo.png"
+                    src="img/logo.svg"
                     alt="Monograma branco com as letras A e V"
                 >
             </a>
@@ -66,39 +67,366 @@
             </div>
         </section>
         <section class="guest-confirmation">
-            <div class="video"><iframe src="https://www.youtube.com/embed/2mgERNz9bb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="confirmation"><button>CONFIRME SUA PRESENÇA</button></div>
+            <!-- <div class="video"><iframe src="https://www.youtube.com/embed/2mgERNz9bb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
+            <div class="confirmation"><button id="myBtn">CONFIRME SUA PRESENÇA</button></div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form action="https://api.staticforms.xyz/submit" method="POST">
+                        <input type="hidden" name="accessKey" value="cdcbdd1a-ad0d-4fc3-8f65-b69e0e09f5df">
+                        <input type="hidden" name="redirectTo" value="https://casamentoalinevitor.github.io/home/">
+
+                        <div class="form-wrapper">
+                            <label for="name">Nome completo</label>
+                            <input name="name" type="text" required>
+                        </div>
+                        <div class="form-wrapper">
+                            <label for="email">E-mail</label>
+                            <input name="email" type="email" required>
+                        </div>
+                        <div class="form-wrapper">
+                            <label for="phone">RG</label>
+                            <input name="phone" type="number" required>
+                        </div>
+                        <button>
+                            ENVIAR
+                        </button>
+                    </form>
+                </div>
+            </div>
         </section>
         <section class="our-history">
             <a name="nossahistoria"></a>
             <h2 class="subtitle">Nossa História</h2>
             <div class="col-2">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam placeat eos quam reiciendis, a nulla quae consectetur voluptates expedita laudantium! Voluptas possimus quibusdam nisi cum consequuntur excepturi est doloribus expedita. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam placeat eos quam reiciendis, a nulla quae consectetur voluptates expedita laudantium! Voluptas possimus quibusdam nisi cum consequuntur excepturi est doloribus expedita.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aut velit quidem quae officiis eos asperiores quo error dolores voluptatum sit itaque magnam, pariatur odit corporis. Voluptatem nihil saepe enim. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam placeat eos quam reiciendis, a nulla quae consectetur voluptates expedita laudantium! Voluptas possimus quibusdam nisi cum consequuntur excepturi est doloribus expedita.</p>
+                <div>
+                    <p>
+                        Era 2003, o início de uma jornada de aprendizado, o início do ensino fundamental e o início de uma linda história de amor. Foi ali, na inocência da infância, que a Aline e o Vitor se conheceram, sem pretensões e sem sequer imaginar o que os planos de Deus lhes tinham reservado para o futuro.
+                    </p>
+                    <p>
+                        O amor que germinava ao longo dos anos, ainda que de maneira tímida, se mostrando apenas uma mera paixão de infância, floresceu. Por alguns anos a vida escolar os separou, mas a distância pouco influenciou aqueles pequenos corações.
+                    </p>
+                    <p>
+                        A Aline, que inicialmente era a mais resistente em relação aos próprios sentimentos, se viu envolvida por aquele amor tão genuíno que Vitor sempre demonstrou.
+                    </p>
+                    <p>
+                        Em 2011, após incansáveis tentativas, muita determinação e muita luta (😅), Vitor finalmente recebeu o sim que tanto almejava, a Aline aceitou e então iniciaram seu relacionamento oficialmente.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Os anos passaram e muitas coisas aconteceram, mas o jardim do amor nunca deixou de florescer. O ano de 2019 marcou o início de uma segunda fase, pois foi em uma noite de Natal que os corações apaixonados se juntaram em um único propósito, noivar.
+                    </p>
+                    <p>
+                        Foi dado a largada à um grande desafio, muita organização e realização e agora é hora de mais um passo, é o momento de mais um sim acontecer.
+                    </p>
+                    <p>
+                        Nosso grande dia está chegando, estamos muito felizes e queremos que você faça parte dessa ocasião muito especial.
+                    </p>
+                    <p>
+                        Nos vemos no dia 29 de abril de 2023! ❤️
+                    </p>
+                </div>
             </div>
             <div class="photos-row">
-                <div class="img" id="img1"></div>
-                <div class="img" id="img2"></div>
-                <div class="img" id="img3"></div>
-                <div class="img" id="img4"></div>
-                <div class="img" id="img5"></div>
+                <div class="movieroll">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="photos">
+                    <img src="img/ourhistory/1.jpg">
+                    <img src="img/ourhistory/2.jpg">
+                    <img src="img/ourhistory/3.jpg">
+                    <img src="img/ourhistory/4.jpg">
+                    <img src="img/ourhistory/5.jpg">
+                    <img src="img/ourhistory/6.jpg">
+                    <img src="img/ourhistory/7.jpg">
+                    <img src="img/ourhistory/8.jpg">
+                    <img src="img/ourhistory/9.jpg">
+                    <img src="img/ourhistory/10.jpg">
+                    <img src="img/ourhistory/11.jpg">
+                    <img src="img/ourhistory/12.jpg">
+                    <img src="img/ourhistory/13.jpg">
+                    <img src="img/ourhistory/14.jpg">
+                    <img src="img/ourhistory/15.jpg">
+                </div>
+                <div class="movieroll">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </section>
         <section class="como-chegar">
             <a name="comochegar"></a>
             <h2 class="subtitle">Como Chegar</h2>
             <div class="address-info">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14627.561562365005!2d-46.51516206394041!3d-23.57237982025466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce676edd286c5f%3A0x4b56801d4922f046!2sShopping%20Aricanduva!5e0!3m2!1spt-BR!2sbr!4v1668904896853!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10834.23411361766!2d-46.45844114331584!3d-23.167259572006788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce95c60a15bce3%3A0xfcebb814165a3b14!2sRua%20Lic%C3%ADnio%20Carpinelli%2C%20442%20-%20Alpes%20D%20Ouro%2C%20Bom%20Jesus%20dos%20Perd%C3%B5es%20-%20SP%2C%2012955-000!5e0!3m2!1spt-BR!2sbr!4v1670278496288!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class="address">
                     <h3>ENDEREÇO</h3>
-                    <p class="local">Shopping Aricanduva</p>
-                    <p>Avenida Aricanduva, 5555</p>
-                    <p>Aricanduva, São Paulo - SP</p>
-                    <p class="instructions">
+                    <p class="local">Uma Bela Casa Rústica</p>
+                    <p>Rua Licínio Carpinelli, 442</p>
+                    <p>Alpes D'Ouro, Bom Jesus dos Perdões - SP - CEP: 12955-000</p>
+                    <!-- <p class="instructions">
                         Ao sair da Mateo Bei, pegue a primeira saída para a Avenida Aricanduva
                         <br>
                         Ponto de referência: CEU
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </section>
@@ -106,16 +434,11 @@
             <a name="listadepresentes"></a>
             <h2 class="subtitle">Lista de Presentes</h2>
             <div class="list-access">
-                <button id="myBtn">ACESSE AQUI NOSSA LISTA DE PRESENTES</button>
-            </div>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div class="links">
-                        <button><a href="#">CASAS BAHIA</a></button>
-                        <button><a href="#">MAGAZINE LUIZA</a></button>
-                    </div>
-                </div>
+                <a href="http://noivos.casar.com/aline-e-vitor-29-04-2023" target="_blank">
+                    <button>
+                        ACESSE AQUI NOSSA LISTA DE PRESENTES
+                    </button>
+                </a>
             </div>
         </section>
         <section class="gallery">

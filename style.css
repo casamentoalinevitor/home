@@ -25,11 +25,18 @@
     --green: #353920;
 }
 
+:target {
+    scroll-margin-top: 4.5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 1.6rem;
     font-family: var(--text-font);
 }
-
 
 .subtitle {
     text-transform: uppercase;
@@ -64,7 +71,8 @@ nav {
 }
 
 .logo img {
-    height: 100%;
+    height: 10rem;
+    width: 10rem;
 }
 
 nav ul {
@@ -170,161 +178,14 @@ nav ul li a:hover {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding: 5rem 2rem;
-}
-
-.guest-confirmation div {
-    width: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    padding: 5rem 2rem;
 }
 
 .guest-confirmation iframe {
     max-width: 56rem;
     width: 100%;
     height: 31.5rem;
-}
-
-button {
-    font-family: var(--text-font);
-    padding: 2rem 5rem;
-    margin: 5rem auto;
-    background: var(--main-color);
-    color: var(--highlight-color);
-    border: none;
-    font-size: 1.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .2s;
-}
-
-button:hover {
-    color: #FFF;
-}
-
-/* OUR HISTORY SECTION */
-
-.our-history {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    margin-bottom: 10rem;
-}
-
-.our-history .col-2 {
-    display: flex;
-    gap: 2rem;
-    margin: 1rem 0;
-}
-
-.our-history .col-2 p {
-    width: 100%;
-}
-
-.our-history .photos-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .1rem;
-    margin-top: 4rem;
-}
-
-.our-history .photos-row img {
-    width: 20%;
-    height: 25rem;
-    object-fit: cover;
-}
-
-.photos-row .img {
-    width: 20%;
-    height: 25rem;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-@media (max-width: 1000px) {
-    .photos-row .img {
-        width: 25%;
-    }
-
-    .photos-row .img:nth-child(5) {
-        display: none;
-    }
-}
-
-@media (max-width: 700px) {
-    .photos-row .img {
-        width: 33.33%;
-    }
-    
-    .photos-row .img:nth-child(4) {
-        display: none;
-    }
-}
-
-@media (max-width: 550px) {
-    .photos-row .img {
-        width: 50%;
-    }
-    
-    .photos-row .img:nth-child(3) {
-        display: none;
-    }
-}
-/* COMO CHEGAR SECTION */
-
-.como-chegar {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.como-chegar .address-info {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-}
-
-.como-chegar .address-info iframe {
-    width: 50%;
-    height: 50rem;
-    border: .3rem solid var(--main-color);
-}
-
-.como-chegar .address-info .address {
-    text-align: center;
-    width: 50%;
-    padding: 0 1rem;
-}
-
-.como-chegar .address-info .address h3 {
-    color: var(--main-color);
-    margin-bottom: 1rem;
-}
-
-.como-chegar .address-info .address .local {
-    font-family: var(--highlight-font);
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.como-chegar .address-info .address .instructions {
-    margin-top: 5rem;
-}
-
-/* GIFTS LIST SECTION */
-
-.gifts-list {
-    max-width: 144rem;
-    padding: 0 2rem;
-    margin: 5rem auto;
-}
-
-.list-access {
-    display: flex;
-    align-items: center;
 }
 
 .modal {
@@ -343,28 +204,61 @@ button:hover {
 
 .modal-content {
     background: var(--highlight-color);
-    padding: 0 2rem;
-    max-width: 90rem;
-    width: 90%;
+    padding: 8rem 4rem 4rem;
     position: relative;
+    max-width: 60rem;
+    width: 90%;
 }
 
-.links {
+.modal-content form {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 2rem;
-    padding: 2rem 2rem 2rem;
-    margin-bottom: 4rem;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-content form .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.modal-content form .form-wrapper label {
+    text-align: start;
+    max-width: 50rem;
+    width: 100%;
+}
+
+.modal-content form .form-wrapper input {
+    border: none;
+    max-width: 50rem;
+    width: 100%;
+    height: 5rem;
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    font-family: var(--text-font);
+}
+
+.modal-content form .form-wrapper input:focus {
+    box-shadow: 0;
+    outline: 0;
+}
+
+.modal-content form button {
+    margin: 2rem auto 0;
 }
 
 .modal .close {
     color: var(--main-color);
     font-size: 5rem;
     transition: .3s;
-    display: flex;
-    justify-content: end;
     font-weight: 500;
+    position: absolute;
+    top: 0;
+    right: 1rem;
 }
 
 .close:hover,
@@ -374,21 +268,167 @@ button:hover {
   cursor: pointer;
 }
 
-.links button {
-    width: 40%;
-    min-width: 30rem;
-    margin: 0;
-}
-
-.links a {
-    text-decoration: none;
-    color: #FFF;
-    font-weight: 400;
-    transition: .3s;
-}
-
-.links button:hover > a {
+button {
+    font-family: var(--text-font);
+    padding: 2rem 5rem;
+    margin: 5rem auto;
+    background: var(--main-color);
     color: var(--highlight-color);
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    color: #FFF;
+    background: var(--red);
+}
+
+/* OUR HISTORY SECTION */
+
+.our-history {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    margin-bottom: 10rem;
+    overflow: hidden;
+}
+
+.our-history .col-2 {
+    display: flex;
+    column-gap: 4rem;
+    margin: 2rem 0;
+}
+
+.our-history .col-2 div {
+    width: 100%;
+}
+
+.our-history .col-2 p {
+    margin-bottom: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.our-history .photos-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .1rem;
+    margin-top: 4rem;
+    width: 392rem;
+    position: relative;
+    animation: 30s linear infinite alternate photosRow;
+    background: #000;
+}
+
+.our-history .photos-row .movieroll {
+    width: 392rem;
+    background: #000;
+    height: 3rem;
+    display: flex;
+    gap: 2rem;
+    padding: 0 1.4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-history .photos-row .movieroll div {
+    min-width: 1rem;
+    height: 1.5rem;
+    border-radius: .1rem;
+    background: #FFF;
+}
+
+.our-history .photos-row .photos {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-history .photos-row .photos img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+@keyframes photosRow {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: calc(270rem);
+    }
+}
+
+/* COMO CHEGAR SECTION */
+
+.como-chegar {
+    max-width: 1440px;
+    margin: 0 auto 4rem;
+    padding: 4rem;
+    background: var(--main-color);
+    color: #FFF;
+}
+
+.como-chegar .subtitle {
+    color: var(--highlight-color);
+}
+
+.como-chegar .address-info {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.como-chegar .address-info iframe {
+    width: 50%;
+    height: 50rem;
+    border: .5rem solid var(--highlight-color);
+}
+
+.como-chegar .address-info .address {
+    text-align: center;
+    width: 50%;
+    padding: 0 1rem;
+}
+
+.como-chegar .address-info .address h3 {
+    color: var(--highlight-color);
+    margin-bottom: 2rem;
+}
+
+.como-chegar .address-info .address .local {
+    font-family: var(--highlight-font);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.como-chegar .address-info .address .instructions {
+    margin-top: 5rem;
+}
+
+/* GIFTS LIST SECTION */
+
+.gifts-list {
+    max-width: 144rem;
+    padding: 0 4rem;
+    margin: 5rem auto;
+}
+
+.gifts-list a {
+    margin: 0 auto;
+}
+
+.list-access {
+    display: flex;
+    align-items: center;
 }
 
 /* PHOTOS GALLERY SECTION */
@@ -433,6 +473,7 @@ button:hover {
 .btn-back:hover,
 .btn-next:hover {
     color: var(--highlight-color);
+    background: var(--red);
 }
 
 .slider {
@@ -485,7 +526,7 @@ button:hover {
 }
 
 .manual-btn:hover {
-    background: var(--highlight-color);
+    background: var(--red);
 }
 
 #radio1:checked ~ .first {
@@ -513,7 +554,7 @@ button:hover {
 #label3.active,
 #label4.active,
 #label5.active {
-    background: var(--highlight-color);
+    background: var(--red);
 }
 
 footer {
@@ -571,8 +612,8 @@ audio {
         flex-direction: column;
     }
 
-    .guest-confirmation div {
-        width: 100%;
+    .our-history .col-2 {
+        flex-direction: column;
     }
 
     .links {
@@ -620,10 +661,6 @@ audio {
         font-size: 1.4rem;
     }
 
-    .our-history .col-2 {
-        flex-direction: column;
-    }
-
     .como-chegar .address-info {
         flex-direction: column-reverse;
     }
@@ -649,6 +686,27 @@ audio {
 
     .home .title span {
         font-size: 4rem;
+    }
+
+    .modal-content {
+        padding: 8rem 2rem 4rem;
+        font-size: 1.4rem;
+    }
+
+    .modal-content form .form-wrapper input {
+        font-size: 1.4rem;
+    }
+
+    .our-history {
+        padding: 0 2rem;
+    }
+
+    .como-chegar {
+        padding: 4rem 2rem;
+    }
+
+    .gifts-list {
+        padding: 0 4rem;
     }
 }
 

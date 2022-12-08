@@ -71,12 +71,22 @@ let radio2 = document.querySelector('#radio2')
 let radio3 = document.querySelector('#radio3')
 let radio4 = document.querySelector('#radio4')
 let radio5 = document.querySelector('#radio5')
+let radio6 = document.querySelector('#radio6')
+let radio7 = document.querySelector('#radio7')
+let radio8 = document.querySelector('#radio8')
+let radio9 = document.querySelector('#radio9')
+let radio10 = document.querySelector('#radio10')
 
 let label1 = document.querySelector('#label1')
 let label2 = document.querySelector('#label2')
 let label3 = document.querySelector('#label3')
 let label4 = document.querySelector('#label4')
 let label5 = document.querySelector('#label5')
+let label6 = document.querySelector('#label6')
+let label7 = document.querySelector('#label7')
+let label8 = document.querySelector('#label8')
+let label9 = document.querySelector('#label9')
+let label10 = document.querySelector('#label10')
 
 let activeClass = 'active'
 let counter = 1
@@ -89,6 +99,12 @@ radio1.addEventListener('click', function() {
   label3.classList.remove(activeClass)
   label4.classList.remove(activeClass)
   label5.classList.remove(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.remove(activeClass)
+
   counter = 1
 })
 
@@ -98,6 +114,11 @@ radio2.addEventListener('click', function() {
   label3.classList.remove(activeClass)
   label4.classList.remove(activeClass)
   label5.classList.remove(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.remove(activeClass)
   counter = 2
 })
 
@@ -107,6 +128,11 @@ radio3.addEventListener('click', function() {
   label3.classList.add(activeClass)
   label4.classList.remove(activeClass)
   label5.classList.remove(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.remove(activeClass)
   counter = 3
 })
 
@@ -116,6 +142,11 @@ radio4.addEventListener('click', function() {
   label3.classList.remove(activeClass)
   label4.classList.add(activeClass)
   label5.classList.remove(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.remove(activeClass)
   counter = 4
 })
 
@@ -125,10 +156,85 @@ radio5.addEventListener('click', function() {
   label3.classList.remove(activeClass)
   label4.classList.remove(activeClass)
   label5.classList.add(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.remove(activeClass)
   counter = 5
 })
 
-for (let i = 1; i < 6; i++) {
+radio6.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.remove(activeClass)
+  label6.classList.add(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.remove(activeClass)
+  counter = 6
+})
+
+radio7.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.remove(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.add(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.remove(activeClass)
+  counter = 7
+})
+
+radio8.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.remove(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.add(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.remove(activeClass)
+  counter = 8
+})
+
+radio9.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.remove(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.add(activeClass)
+  label10.classList.remove(activeClass)
+  counter = 9
+})
+
+radio10.addEventListener('click', function() {
+  label1.classList.remove(activeClass)
+  label2.classList.remove(activeClass)
+  label3.classList.remove(activeClass)
+  label4.classList.remove(activeClass)
+  label5.classList.remove(activeClass)
+  label6.classList.remove(activeClass)
+  label7.classList.remove(activeClass)
+  label8.classList.remove(activeClass)
+  label9.classList.remove(activeClass)
+  label10.classList.add(activeClass)
+  counter = 10
+})
+
+for (let i = 1; i < 11; i++) {
   if (document.querySelector('#radio' + i).checked) {
     counter = i
   }
@@ -139,7 +245,7 @@ nextGalleryPhotoButton.addEventListener('click', nextGalleryPhoto)
 
 function backGalleryPhoto() {
   if (counter == 1) {
-    counter = 5
+    counter = 10
   } else {
     counter--
   }
@@ -155,12 +261,17 @@ function backGalleryPhoto() {
     label3.classList.remove(activeClass)
     label4.classList.remove(activeClass)
     label5.classList.remove(activeClass)
+    label6.classList.remove(activeClass)
+    label7.classList.remove(activeClass)
+    label8.classList.remove(activeClass)
+    label9.classList.remove(activeClass)
+    label10.classList.remove(activeClass)
     labelChecked.classList.add(activeClass)
   }
 }
 
 function nextGalleryPhoto() {
-  if (counter == 5) {
+  if (counter == 10) {
     counter = 1
   } else {
     counter++
@@ -177,6 +288,11 @@ function nextGalleryPhoto() {
     label3.classList.remove(activeClass)
     label4.classList.remove(activeClass)
     label5.classList.remove(activeClass)
+    label6.classList.remove(activeClass)
+    label7.classList.remove(activeClass)
+    label8.classList.remove(activeClass)
+    label9.classList.remove(activeClass)
+    label10.classList.remove(activeClass)
     labelChecked.classList.add(activeClass)
   }
 }

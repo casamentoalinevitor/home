@@ -431,16 +431,12 @@ button:hover {
     align-items: center;
 }
 
-#myBtn {
-    margin: 5rem auto 0;
-}
-
 /* PHOTOS GALLERY SECTION */
 
 .gallery {
     max-width: 144rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 
 .images-gallery {
@@ -488,7 +484,7 @@ button:hover {
 }
 
 .slides {
-    width: 500%;
+    width: 1000%;
     height: 50rem;
     display: flex;
 }
@@ -498,7 +494,7 @@ button:hover {
 }
 
 .slide {
-    width: 20%;
+    width: 10%;
     transition: 2s;
 }
 
@@ -538,26 +534,51 @@ button:hover {
 }
 
 #radio2:checked ~ .first {
-    margin-left: -20%;
+    margin-left: -10%;
 }
 
 #radio3:checked ~ .first {
-    margin-left: -40%;
+    margin-left: -20%;
 }
 
 #radio4:checked ~ .first {
-    margin-left: -60%;
+    margin-left: -30%;
 }
 
 #radio5:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio6:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio7:checked ~ .first {
+    margin-left: -60%;
+}
+
+#radio8:checked ~ .first {
+    margin-left: -70%;
+}
+
+#radio9:checked ~ .first {
     margin-left: -80%;
+}
+
+#radio10:checked ~ .first {
+    margin-left: -90%;
 }
 
 #label1.active,
 #label2.active,
 #label3.active,
 #label4.active,
-#label5.active {
+#label5.active,
+#label6.active,
+#label7.active,
+#label8.active,
+#label9.active,
+#label10.active {
     background: var(--red);
 }
 
@@ -596,7 +617,6 @@ audio {
         justify-content: space-around;
         padding: 10rem 2rem;
         display: none;
-        /* transform: translateX(100%); */
         transition: transform 0.3s ease-in;
     }
 
@@ -630,9 +650,33 @@ audio {
 
     .btn-back,
     .btn-next {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         font-size: 1.5rem;
+    }
+
+    .btn-next {
+        right: 1rem;
+    }
+
+    .btn-back {
+        left: 1rem;
+    }
+
+    .our-history {
+        padding: 0 3rem;
+    }
+
+    .como-chegar {
+        padding: 4rem 3rem;
+    }
+
+    .gifts-list {
+        padding: 0 3rem;
+    }
+
+    .gallery {
+        padding: 0 3rem;
     }
 }
 
@@ -681,6 +725,22 @@ audio {
     .slide img {
         object-fit: cover;
     }
+
+    .our-history {
+        padding: 0 2rem;
+    }
+
+    .como-chegar {
+        padding: 4rem 2rem;
+    }
+
+    .gifts-list {
+        padding: 0 2rem;
+    }
+
+    .gallery {
+        padding: 0 2rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -700,23 +760,22 @@ audio {
     .modal-content form .form-wrapper input {
         font-size: 1.4rem;
     }
-
-    .our-history {
-        padding: 0 2rem;
-    }
-
-    .como-chegar {
-        padding: 4rem 2rem;
-    }
-
-    .gifts-list {
-        padding: 0 4rem;
-    }
 }
 
 .nav-list.active {
     transform: translateX(0);
     display: flex;
+    animation: .25s linear mobileNavbar;
+}
+
+@keyframes mobileNavbar {
+    0% {
+        right: -50vw;
+    }
+
+    100% {
+        left: 50vw;
+    }
 }
 
 @keyframes navLinkFade {

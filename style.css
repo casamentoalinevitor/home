@@ -45,6 +45,49 @@ body {
     letter-spacing: .5rem;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+form label {
+    text-align: start;
+    max-width: 50rem;
+    width: 100%;
+}
+
+form input {
+    max-width: 50rem;
+    width: 100%;
+    height: 5rem;
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    font-family: var(--text-font);
+    border: solid .2rem var(--main-color);
+}
+
+form input:focus,
+form textarea:focus {
+    box-shadow: 0;
+    outline: 0;
+}
+
+form button {
+    margin: 2rem auto 0;
+}
+
 header {
     background: var(--main-color);
     display: flex;
@@ -221,47 +264,6 @@ nav ul li a:hover {
     text-transform: uppercase;
 }
 
-.modal-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    width: 100%;
-}
-
-.modal-content form .form-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-.modal-content form .form-wrapper label {
-    text-align: start;
-    max-width: 50rem;
-    width: 100%;
-}
-
-.modal-content form .form-wrapper input {
-    max-width: 50rem;
-    width: 100%;
-    height: 5rem;
-    font-size: 1.6rem;
-    padding: 0 2rem;
-    font-family: var(--text-font);
-    border: solid .2rem var(--main-color);
-}
-
-.modal-content form .form-wrapper input:focus {
-    box-shadow: 0;
-    outline: 0;
-}
-
-.modal-content form button {
-    margin: 2rem auto 0;
-}
-
 .modal .close {
     color: var(--main-color);
     font-size: 6rem;
@@ -330,13 +332,13 @@ button:hover {
     margin-top: 4rem;
     width: 392rem;
     position: relative;
-    animation: 30s linear infinite alternate photosRow;
-    background: #000;
+    animation: 15s linear infinite alternate photosRow;
+    background: var(--main-color);
 }
 
 .our-history .photos-row .movieroll {
-    width: 392rem;
-    background: #000;
+    width: 100%;
+    background: var(--main-color);
     height: 3rem;
     display: flex;
     gap: 2rem;
@@ -364,7 +366,7 @@ button:hover {
     width: 25rem;
     height: 25rem;
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: .5rem;
 }
 
 @keyframes photosRow {
@@ -373,7 +375,7 @@ button:hover {
     }
 
     100% {
-        right: calc(270rem);
+        right: 255rem;
     }
 }
 
@@ -430,6 +432,7 @@ button:hover {
 .gifts-list {
     max-width: 144rem;
     padding: 0 4rem;
+    margin: 0 auto;
 }
 
 .gifts-list a {
@@ -599,23 +602,21 @@ button:hover {
 .message-form .content {
     max-width: 144rem;
     margin: 6rem auto 0;
-    padding: 8rem 4rem;
+    padding: 4rem;
 }
 
 .message-form .subtitle {
     text-align: center;
+    color: var(--highlight-color);
+    padding-bottom: 4rem;
 }
 
 .message-form form {
     background: var(--main-color);
     max-width: 50rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 4rem;
-    padding: 6rem 0 2rem;
+    margin: 4rem auto;
+    padding: 8rem 0;
+    /* height: 50rem; */
 }
 
 .message-form form input,
@@ -624,12 +625,7 @@ button:hover {
     width: 90%;
     font-size: 1.6rem;
     font-family: var(--text-font);
-}
-
-.message-form form input:focus,
-.message-form form textarea:focus {
-    box-shadow: 0;
-    outline: 0;
+    border: .3rem solid var(--highlight-color);
 }
 
 .message-form form input {
@@ -751,6 +747,16 @@ audio {
     .gallery {
         padding: 0 3rem;
     }
+
+    @keyframes photosRow {
+        0% {
+            right: 0;
+        }
+    
+        100% {
+            right: 300rem;
+        }
+    }
 }
 
 @media (max-width: 620px) {
@@ -814,6 +820,20 @@ audio {
     .gallery {
         padding: 0 2rem;
     }
+
+    .message-form .content {
+        padding: 4rem 2rem;
+    }
+
+    @keyframes photosRow {
+        0% {
+            right: 0;
+        }
+    
+        100% {
+            right: 340rem;
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -832,6 +852,30 @@ audio {
 
     .modal-content form .form-wrapper input {
         font-size: 1.4rem;
+    }
+
+    .our-history .photos-row {
+        width: 239rem;
+    }
+
+    .our-history .photos-row .photos {
+        gap: .75rem;
+    }
+
+    .our-history .photos-row .photos img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    @keyframes photosRow {
+        0% {
+            right: 0;
+        }
+    
+        100% {
+            /* right: 255rem; */
+            right: calc(200rem);
+        }
     }
 }
 

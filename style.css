@@ -129,6 +129,7 @@ nav ul li a {
     color: #FFF;
     text-decoration: none;
     transition: color .2s;
+    font-size: 1.4rem;
 }
 
 nav ul li a:hover {
@@ -220,9 +221,10 @@ nav ul li a:hover {
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 2rem;
+    padding: 5rem 2rem 2rem;
 }
 
 .guest-confirmation iframe {
@@ -297,6 +299,7 @@ button {
 button:hover {
     color: #FFF;
     background: var(--red);
+    outline: solid .25rem var(--highlight-color);
 }
 
 /* OUR HISTORY SECTION */
@@ -382,11 +385,14 @@ button:hover {
 /* COMO CHEGAR SECTION */
 
 .como-chegar {
+    background: var(--main-color);
+    color: #FFF;
+}
+
+.como-chegar .content {
     max-width: 1440px;
     margin: 0 auto 4rem;
     padding: 4rem;
-    background: var(--main-color);
-    color: #FFF;
 }
 
 .como-chegar .subtitle {
@@ -394,7 +400,7 @@ button:hover {
 }
 
 .como-chegar .address-info {
-    margin-top: 2rem;
+    margin: 4rem 0 2rem;
     display: flex;
     align-items: center;
 }
@@ -405,18 +411,25 @@ button:hover {
     border: .5rem solid var(--highlight-color);
 }
 
-.como-chegar .address-info .address {
+.como-chegar .address-info .text {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
     text-align: center;
     width: 50%;
     padding: 0 1rem;
 }
 
-.como-chegar .address-info .address h3 {
+.como-chegar .address-info h3 {
     color: var(--highlight-color);
     margin-bottom: 2rem;
 }
 
-.como-chegar .address-info .address .local {
+.como-chegar .address-info p {
+    margin-bottom: 1rem;
+}
+
+.como-chegar .address-info .local {
     font-family: var(--highlight-font);
     font-size: 2rem;
     font-weight: bold;
@@ -736,7 +749,7 @@ audio {
         padding: 0 3rem;
     }
 
-    .como-chegar {
+    .como-chegar .content {
         padding: 4rem 3rem;
     }
 
@@ -796,9 +809,9 @@ audio {
         width: 100%;
     }
 
-    .como-chegar .address-info .address {
+    .como-chegar .address-info .text {
+        margin-bottom: 4rem;
         width: 100%;
-        margin: 5rem 0;
     }
 
     .slide img {
@@ -809,7 +822,7 @@ audio {
         padding: 0 2rem;
     }
 
-    .como-chegar {
+    .como-chegar .content {
         padding: 4rem 2rem;
     }
 

@@ -34,7 +34,7 @@
                     <a href="#nossahistoria">NOSSA HISTÓRIA</a>
                 </li>
                 <li>
-                    <a href="#comochegar">COMO CHEGAR</a>
+                    <a href="#informacoes">INFORMAÇÕES</a>
                 </li>
                 <li>
                     <a href="#listadepresentes">LISTA DE PRESENTES</a>
@@ -67,7 +67,7 @@
             </div>
         </section>
         <section class="guest-confirmation">
-            <!-- <div class="video"><iframe src="https://www.youtube.com/embed/2mgERNz9bb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ugRccmxk9Ys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="confirmation"><button id="myBtn">CONFIRME SUA PRESENÇA</button></div>
             <div id="myModal" class="modal">
                 <div class="modal-content">
@@ -414,15 +414,25 @@
             </div>
         </section>
         <section class="como-chegar">
-            <a name="comochegar"></a>
-            <h2 class="subtitle">Como Chegar</h2>
-            <div class="address-info">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10834.23411361766!2d-46.45844114331584!3d-23.167259572006788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce95c60a15bce3%3A0xfcebb814165a3b14!2sRua%20Lic%C3%ADnio%20Carpinelli%2C%20442%20-%20Alpes%20D%20Ouro%2C%20Bom%20Jesus%20dos%20Perd%C3%B5es%20-%20SP%2C%2012955-000!5e0!3m2!1spt-BR!2sbr!4v1670278496288!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div class="address">
-                    <h3>ENDEREÇO</h3>
-                    <p class="local">Uma Bela Casa Rústica</p>
-                    <p>Rua Licínio Carpinelli, 442</p>
-                    <p>Alpes D'Ouro, Bom Jesus dos Perdões - SP - CEP: 12955-000</p>
+            <a name="informacoes"></a>
+            <div class="content">
+                <h2 class="subtitle">Informações do Evento</h2>
+                <div class="address-info">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10834.23411361766!2d-46.45844114331584!3d-23.167259572006788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce95c60a15bce3%3A0xfcebb814165a3b14!2sRua%20Lic%C3%ADnio%20Carpinelli%2C%20442%20-%20Alpes%20D%20Ouro%2C%20Bom%20Jesus%20dos%20Perd%C3%B5es%20-%20SP%2C%2012955-000!5e0!3m2!1spt-BR!2sbr!4v1670278496288!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="text">
+                        <div class="dateandtime">
+                            <h3>DATA E HORÁRIO</h3>
+                            <p class="local">29 de Abril de 2023</p>
+                            <p>A partir das 16h</p>
+                            <p>(Chegue com 30min de antecedência)</p>
+                        </div>
+                        <div class="address">
+                            <h3>ENDEREÇO</h3>
+                            <p class="local">Uma Bela Casa Rústica</p>
+                            <p>Rua Licínio Carpinelli, 442</p>
+                            <p>Alpes D'Ouro, Bom Jesus dos Perdões - SP - CEP: 12955-000</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -509,7 +519,10 @@
         <section class="message-form">
             <a name="enviarrecado"></a>
             <div class="content">
-                <form>
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <input type="hidden" name="accessKey" value="cdcbdd1a-ad0d-4fc3-8f65-b69e0e09f5df">
+                    <input type="hidden" name="redirectTo" value="https://casamentoalinevitor.github.io/home/">
+
                     <h2 class="subtitle">ENVIAR RECADO</h2>
                     <input type="text" name="name" placeholder="Seu nome">
                     <textarea name="message" placeholder="Recado"></textarea>

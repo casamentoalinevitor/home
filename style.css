@@ -334,7 +334,7 @@ button:hover {
     margin-top: 4rem;
     width: 392rem;
     position: relative;
-    animation: 15s linear infinite alternate photosRow;
+    animation: 30s linear infinite alternate photosRow;
     background: var(--main-color);
 }
 

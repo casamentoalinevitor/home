@@ -463,6 +463,7 @@ button:hover {
 .list-access {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .gifts-list button {
@@ -473,7 +474,6 @@ button:hover {
 .gifts-list #flowers {
     position: absolute;
     z-index: -10;
-    top: 20%;
     width: 20rem;
 }
 
@@ -668,7 +668,6 @@ button:hover {
 .message-form form textarea {
     padding: 2rem;
     min-height: 20rem;
-    min-width: 40rem;
 }
 
 .message-form form button {
